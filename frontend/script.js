@@ -48,6 +48,26 @@ console.log(varVariable1);
 let varVariable2;
 console.log(varVariable2);
 
+const constVariable1 = "ciao";
+//constVariable1 = "hello"
+console.log(constVariable1);
+
+const constObj1 = {
+};
+
+//constObj1.key = "value"
+//constObj1 = {key: "value"};
+console.log(constObj1);
+
+const globalVariable3 = function (parameter1, parameter2) {
+    console.log(parameter1);
+    console.log(parameter2);
+}
+
+const globalVariable4 = "apple"
+globalVariable3 (3, globalVariable4);
+
+
 
 const loadEvent = function (){
     const rootElement = document.getElementById("root")
