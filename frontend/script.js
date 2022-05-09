@@ -59,20 +59,31 @@ const constObj1 = {
 //constObj1 = {key: "value"};
 console.log(constObj1);
 
-const globalVariable3 = function (parameter1, parameter2) {
+const globalVariable3 = function (parameter1, parameter2, parameter3) {
     console.log(parameter1);
     console.log(parameter2);
+    console.log(parameter3);
+    console.log(parameter3());
 }
 
 const globalVariable4 = "apple"
-globalVariable3 (3, globalVariable4);
+
+const globalVariable5 = function () {
+    return "pear"
+}
+
+const globalVariable6 = function () {
+    return "shoes"
+}
+
+globalVariable3 (globalVariable5(), globalVariable4, globalVariable6);
 
 
 
 const loadEvent = function (){
     const rootElement = document.getElementById("root")
-
-    console.log(globalVariable1);
+    console.log(rootElement);
+    //console.log(globalVariable1);
 }
 
 window.addEventListener("load", loadEvent)
