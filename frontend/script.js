@@ -11,6 +11,9 @@ let globalVariable2 = function () {
         console.log(funVariable1);
 
         let funInFunVariable1 = true;
+            console.log(funInFunVariable1);
+
+
         let funInFunVariable2 = function() {
             console.log(funInFunVariable1);
 
