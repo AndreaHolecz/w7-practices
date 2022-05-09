@@ -9,6 +9,14 @@ let globalVariable2 = function () {
         console.log("funVariable2 belseje");
         console.log(globalVariable1);
         console.log(funVariable1);
+
+        let funInFunVariable1 = true;
+        let funInFunVariable2 = function() {
+            console.log(funInFunVariable1);
+
+        }
+
+        funInFunVariable2();
     }
 
     funVariable2();
