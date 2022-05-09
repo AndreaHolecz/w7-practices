@@ -23,11 +23,25 @@ let globalVariable2 = function () {
     }
 
     funVariable2();
+
+    console.log (funVariable1);
+
+    if(funVariable1 === "hello"){
+        var blockVariable1 = "Bye"
+    }else{
+        /*console.log(blockVariable1);*/
+    }
+
+    console.log(blockVariable1);
 }
 
 globalVariable2()
 
 /*console.log (funvariable1);*/
+
+var varVariable = 1;
+console.log(varVariable);
+
 
 const loadEvent = function (){
     const rootElement = document.getElementById("root")
