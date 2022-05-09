@@ -80,10 +80,15 @@ globalVariable3 (globalVariable5(), globalVariable4, globalVariable6);
 
 
 
-const loadEvent = function (){
+const loadEvent = function (parameter1){
     const rootElement = document.getElementById("root")
     console.log(rootElement);
+    console.log(parameter1);
     //console.log(globalVariable1);
+    rootElement.addEventListener("click", function(event) {
+        console.log(event);
+        
+    })
 }
 
 window.addEventListener("load", loadEvent)
