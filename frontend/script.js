@@ -41,9 +41,12 @@ globalVariable2()
 
 var varVariable = 1;
 
-console.log(varVariable);
 
-let varVariable = 2;
+let varVariable1 = 2;
+console.log(varVariable1);
+
+let varVariable2;
+console.log(varVariable2);
 
 
 const loadEvent = function (){
