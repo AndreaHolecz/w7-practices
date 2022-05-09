@@ -2,7 +2,14 @@ let globalVariable1 = 12;
 
 let globalVariable2 = function () {
     console.log ("inside the function", globalVariable1);
+
     let funVariable1 = "hello"
+
+    let funVariable2 = function () {
+        console.log("funVariable2 belseje");
+    }
+    
+    funVariable2();
 }
 
 globalVariable2()
