@@ -7,8 +7,10 @@ let globalVariable2 = function () {
 
     let funVariable2 = function () {
         console.log("funVariable2 belseje");
+        console.log(globalVariable1);
+        console.log(funVariable1);
     }
-    
+
     funVariable2();
 }
 
