@@ -86,8 +86,9 @@ const loadEvent = function (parameter1){
     console.log(parameter1);
     //console.log(globalVariable1);
     rootElement.addEventListener("click", function(event) {
-        console.log(event);
-        
+        console.log(event.currentTarget);
+        event.currentTarget.insertAdjacentHTML("beforeend", `<span>Clicked</span>`)
+        event.target.classList.toggle("clicked")
     })
 }
 
