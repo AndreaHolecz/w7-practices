@@ -9,6 +9,19 @@
 
 #menu-btn::before, #menu-btn::after {
   content: "";
+  position: absolute;
+  right: 8px;
+  width: 40px;
+  height: 4px;
+  background-color: bisque;
+}
+
+#menu-btn::before {
+  top: 20px;
+}
+
+#menu-btn::after {
+  top: 36px;
 }
 
 #menu-btn.clicked {
