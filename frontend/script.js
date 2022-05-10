@@ -4,6 +4,7 @@ const menuButtonComponent = function() {
 
 const loadEvent = function (parameter1){
     const rootElement = document.getElementById("root");
+    console.log(rootElement.parentElement);
 
     rootElement.insertAdjacentHTML("beforeend", menuButtonComponent())
 
@@ -11,6 +12,10 @@ const loadEvent = function (parameter1){
 
     menuButtonElement.addEventListener("click", function (event) {
         event.target.classList.toggle("clicked")
+        //console.log(rootElement);
+        //console.log(event.currentTarget.parentElement);
+        //console.log(event.currentTarget.closest("#root"));
+        event.currentTarget.closest("#root").classList.toggle("clicked");
     })
 }
 
