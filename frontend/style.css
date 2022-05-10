@@ -1,1 +1,17 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+#menu-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+}
+
+#menu-btn::before, #menu-btn::after {
+  content: "";
+}
+
+#menu-btn.clicked {
+  background-color: gray;
+}
+/*# sourceMappingURL=style.css.map */
