@@ -4,11 +4,7 @@
   background-color: #ccc;
 }
 
-#root.clicked {
-  background-color: #fff;
-}
-
-#menu-btn {
+#root #menu-btn {
   position: fixed;
   top: 0;
   right: 0;
@@ -17,7 +13,7 @@
   background-color: black;
 }
 
-#menu-btn::before, #menu-btn::after {
+#root #menu-btn::before, #root #menu-btn::after {
   content: "";
   position: absolute;
   right: 8px;
@@ -30,25 +26,29 @@
   transition: top 400ms, transform 500ms, -webkit-transform 500ms;
 }
 
-#menu-btn::before {
+#root #menu-btn::before {
   top: 20px;
 }
 
-#menu-btn::after {
+#root #menu-btn::after {
   top: 36px;
 }
 
-#menu-btn.clicked {
+#root.menu-opened {
+  background-color: #fff;
+}
+
+#root.menu-opened #menu-btn {
   background-color: #333;
 }
 
-#menu-btn.clicked::before {
+#root.menu-opened #menu-btn::before {
   top: 28px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-#menu-btn.clicked::after {
+#root.menu-opened #menu-btn::after {
   top: 28px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);

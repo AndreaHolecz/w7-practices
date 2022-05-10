@@ -4,55 +4,57 @@
 
     background-color: #ccc;
 
-    &.clicked {
-        background-color: #fff;
-    }
-}
 
-#menu-btn {
-    position: fixed;
-    top: 0;
-    right: 0;
 
-    width: 60px;
-    height: 60px;
-
-    background-color: black;
-
-    &::before,
-    &::after {
-        content: "";
-
-        position: absolute;
-        right: 8px;
-
-        width: 40px;
-        height: 4px;
-
-        background-color: white;
-
-        transition: top 400ms, transform 500ms;
-    }
-
-    &::before {
-        top: 20px;
-    }
-
-    &::after {
-        top: 36px;
-    }
-
-    &.clicked {
-        background-color: #333;
-
+    #menu-btn {
+        position: fixed;
+        top: 0;
+        right: 0;
+    
+        width: 60px;
+        height: 60px;
+    
+        background-color: black;
+    
+        &::before,
+        &::after {
+            content: "";
+    
+            position: absolute;
+            right: 8px;
+    
+            width: 40px;
+            height: 4px;
+    
+            background-color: white;
+    
+            transition: top 400ms, transform 500ms;
+        }
+    
         &::before {
-            top: 28px;
-            transform: rotate(45deg);
+            top: 20px;
         }
     
         &::after {
-            top: 28px;
-            transform: rotate(-45deg);
+            top: 36px;
+        }
+    }
+    
+    &.menu-opened {
+        background-color: #fff;
+        
+        #menu-btn {
+            background-color: #333;
+        
+            &::before {
+                top: 28px;
+                transform: rotate(45deg);
+            }
+        
+            &::after {
+                top: 28px;
+                transform: rotate(-45deg);
+            }
         }
     }
 }
