@@ -18,7 +18,9 @@
         width: 40px;
         height: 4px;
 
-        background-color: bisque;
+        background-color: white;
+
+        transition: top 400ms, transform 500ms;
     }
 
     &::before {
@@ -30,6 +32,16 @@
     }
 
     &.clicked {
-        background-color: gray;
+        background-color: #333;
+
+        &::before {
+            top: 28px;
+            transform: rotate(45deg);
+        }
+    
+        &::after {
+            top: 28px;
+            transform: rotate(-45deg);
+        }
     }
 }
