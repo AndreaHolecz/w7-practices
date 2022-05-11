@@ -45,7 +45,13 @@
     
     &.menu-opened {
         background-color: #fff;
-        
+
+        nav {
+            right: 0;
+
+            //transition: right 500ms;
+        }
+
         #menu-btn {
             background-color: #333;
         
@@ -75,12 +81,14 @@ nav {
     z-index: 99;
 
     top: 0;
-    right: 0;
+    right: -300px;
 
     width: 300px;
     height: 100vh;
 
     padding: 40px;
+
+    transition: right 500ms;
 
     background-color: black;
     color: white;
