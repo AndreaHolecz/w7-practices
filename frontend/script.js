@@ -12,9 +12,15 @@ const beerSectionComponent = function(title, sub, text, id) {
     `
 }
 
-const beerAnchorComponent = function (id, title) {
+const beerAnchorComponent = function (title, id) {
     return `
         <a href="#${id}">${title}</a>
+    `
+}
+
+const beerNavComponent = function(inner){
+    return `
+        <nav>${inner}</nav>
     `
 }
 
@@ -51,6 +57,14 @@ const loadEvent = function (){
     //console.log(beerSections);
 
     rootElement.insertAdjacentHTML("beforeend", beerSections);
+
+    let beerAnchors = "";
+
+    for (const beer of beers.cards) {
+        beerAnchors += beerAnchorComponent (beer.title)
+    }
+
+    rootElement.insertAdjacentHTML ("beforeend", beerNavComponent(beerAnchors));
 }
 
 window.addEventListener("load", loadEvent)
