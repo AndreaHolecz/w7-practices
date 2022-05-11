@@ -2,7 +2,7 @@ const menuButtonComponent = function() {
     return `<button id="menu-btn"></button>`
 }
 
-const beerSectionComponent = function(id, title, sub, text) {
+const beerSectionComponent = function(title, sub, text, id) {
     return `
         <section id="${id}">
             <h1 class="beerName">${title}</h1>
@@ -36,14 +36,21 @@ const loadEvent = function (){
 
     const rootElement = document.getElementById("root");
 
-    rootElement.insertAdjacentHTML("beforeend", menuButtonComponent())
+    rootElement.insertAdjacentHTML("beforeend", menuButtonComponent());
 
-    const menuButtonElement = document.getElementById ("menu-btn")
+    const menuButtonElement = document.getElementById ("menu-btn");
 
-    menuButtonElement.addEventListener("click", function (event) {
+    menuButtonElement.addEventListener("click", menuButtonClickEvent);
 
-        //event.currentTarget.closest("#root").classList.toggle("menu-opened");
-    })
+    let beerSections = "";
+
+    for (const beer of beers.cards) {
+        beerSections += beerSectionComponent(beer.title, beer.sub, beer.text);
+    }
+
+    //console.log(beerSections);
+
+    rootElement.insertAdjacentHTML("beforeend", beerSections);
 }
 
 window.addEventListener("load", loadEvent)
